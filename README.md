@@ -1,2 +1,0 @@
-# README   
-Lee's Engine
