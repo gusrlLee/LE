@@ -155,3 +155,21 @@ project_root/
 ├── LICENSE
 └── Makefile
 ```
+
+# project Idea 
+- console rendering prompt develop 
+- Command Renderer 
+
+
+User can input command in console.  
+And LE is initialized by using user's command.  
+Display 3D render scene on Real-Time.   
+command is very various sush as PBR, Motion Blur, Ray Tracing and building Acceleration structure.  
+This Engine support cross platform (Window and MacOS). (Not Linux!)  --> Vulkan API, Metal API, D3D12 API 
+
+TODO List 
+- Metal API의 initialization 
+- Triangle 먼저 올리기
+
+TODO list 
+we have to refactoring this code.

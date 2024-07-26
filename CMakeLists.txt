@@ -1,11 +1,46 @@
 cmake_minimum_required(VERSION 3.15)
 set(CMAKE_CXX_STANDARD 20)
-project(LE)
+project(Command-Interactive-Renderer)
+
+option(USE_VULKAN "Graphics API: Vulkan" OFF)
+option(USE_METAL "Graphics API: Metal" OFF)
+option(USE_D3D12 "Graphics API: DirectX 12" OFF)
+
+
+if(APPLE)
+    message(STATUS "Your OS is : MacOS")
+    if (USE_VULKAN)
+        message(STATUS "Selected Graphics API : Vulkan API")
+        add_compile_definitions(USE_VULKAN)
+    else ()
+        message(STATUS "Selected Graphics API : Metal API")
+        add_compile_definitions(USE_METAL)
+    endif()
+elseif(WIN32)
+    message(STATUS "Your OS is : Window")
+    if (USE_VULKAN)
+        message(STATUS "Selected Graphics API : Vulkan API")
+        add_compile_definitions(USE_VULKAN)
+    else ()
+        message(STATUS "Selected Graphics API : DirectX 12 API")
+        add_compile_definitions(USE_D3D12)
+    endif()
+endif()
 
 add_subdirectory(ThirdParty)
+# add_subdirectory(LE)
 
 add_executable(${PROJECT_NAME} 
+    Editor/MainLoop.cpp
+    Editor/Editor.cpp
+    Editor/Window.cpp
+
+    Engine/Engine.cpp
+    Engine/Platform.cpp
+
     main.cpp
 )
 
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
+# target_link_libraries(${PROJECT_NAME} LE_CORE)
 target_link_libraries(${PROJECT_NAME} glfw)
