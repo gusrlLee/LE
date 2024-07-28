@@ -7,7 +7,8 @@ Engine* Engine::Create()
 
 Engine* Engine::Init()
 {
-    std::cout << "Hello Lee Engine! " << std::endl;
+    Log::Init();
+    ENGINE_TRACE("Initialization");
     return this;
 }
 

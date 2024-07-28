@@ -30,11 +30,15 @@ endif()
 add_subdirectory(ThirdParty)
 # add_subdirectory(LE)
 
+
+find_package(spdlog)
+
 add_executable(${PROJECT_NAME} 
     Editor/MainLoop.cpp
     Editor/Editor.cpp
     Editor/Window.cpp
-
+    
+    Engine/Log.cpp
     Engine/Engine.cpp
     Engine/Platform.cpp
 
@@ -44,3 +48,4 @@ add_executable(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
 # target_link_libraries(${PROJECT_NAME} LE_CORE)
 target_link_libraries(${PROJECT_NAME} glfw)
+target_link_libraries(${PROJECT_NAME} spdlog::spdlog)

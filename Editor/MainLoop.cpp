@@ -9,8 +9,8 @@ void MainLoop::SetUp()
     glfwInit();
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
-    m_editor = Editor::Create()->Init();
     m_engine = Engine::Create()->Init();
+    m_editor = Editor::Create()->Init();
 }
 
 void MainLoop::Run()

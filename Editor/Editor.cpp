@@ -7,7 +7,7 @@ Editor* Editor::Create()
 
 Editor* Editor::Init()
 {
-    std::cout << "Hello world! Lee Editor!" << std::endl;
+    EDITOR_TRACE("Initalization");
     m_window = Window::Create()->Init();
     return this;
 }
