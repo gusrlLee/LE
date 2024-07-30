@@ -18,6 +18,10 @@ class Window {
         Window() = default;
         ~Window();
         Window* Init();
+
+        GLFWwindow* GetEditorWindowPtr() { return m_editor_window; }
+        uint32_t GetWindowWidth() { return m_window_property.window_width; }
+        uint32_t GetWindowHeight() { return m_window_property.window_height; }
         
         void Update();
         bool IsShouldCloseWindow() { return glfwWindowShouldClose(m_editor_window); } 

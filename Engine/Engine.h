@@ -5,14 +5,19 @@
 #include "Platform.h"
 #include "Log.h"
 
+#include "Renderer.h"
+
+#include "GLFW/glfw3.h"
+
 class Engine {
     public:
-        // construction
+        Engine() = default;
+        ~Engine() = default;
+
+        // Construction
         static Engine* Create();
         Engine* Init();
 
+        void Connect(GLFWwindow* window);
         void Release();
-
-    private:
-
 };

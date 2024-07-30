@@ -20,6 +20,7 @@ void Editor::Release()
 void Editor::Connect(Engine* engine)
 {
     m_engine = engine;
+    engine->Connect(m_window->GetEditorWindowPtr());
     std::cout << "Success Connect Engine!" << std::endl;
 }
 

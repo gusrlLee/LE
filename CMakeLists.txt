@@ -30,7 +30,6 @@ endif()
 add_subdirectory(ThirdParty)
 # add_subdirectory(LE)
 
-
 find_package(spdlog)
 
 add_executable(${PROJECT_NAME} 
@@ -41,6 +40,13 @@ add_executable(${PROJECT_NAME}
     Engine/Log.cpp
     Engine/Engine.cpp
     Engine/Platform.cpp
+    Engine/Renderer.cpp
+    Engine/RenderCommand.cpp
+    Engine/RHI.cpp
+
+    Engine/RHI/Metal/MTRHI.cpp
+    Engine/RHI/Metal/MTSwapChain.cpp
+    Engine/RHI/Metal/MTAdapter.mm
 
     main.cpp
 )
@@ -49,3 +55,5 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
 # target_link_libraries(${PROJECT_NAME} LE_CORE)
 target_link_libraries(${PROJECT_NAME} glfw)
 target_link_libraries(${PROJECT_NAME} spdlog::spdlog)
+target_link_libraries(${PROJECT_NAME} METAL_CPP)
+target_link_libraries(${PROJECT_NAME} objc)

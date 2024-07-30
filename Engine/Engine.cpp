@@ -8,11 +8,19 @@ Engine* Engine::Create()
 Engine* Engine::Init()
 {
     Log::Init();
-    ENGINE_TRACE("Initialization");
+    Renderer::Init();
+
     return this;
 }
 
 void Engine::Release()
 {
+    ENGINE_INFO("Delete ENGINE!");
     delete this;
+}
+
+void Engine::Connect(GLFWwindow* window)
+{
+    ENGINE_INFO("Connecting Window!");
+    Renderer::ConnectWindow(window);
 }
