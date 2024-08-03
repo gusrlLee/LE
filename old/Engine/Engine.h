@@ -1,9 +1,8 @@
-#pragma once 
-
+#pragma once
 #include <iostream>
 
-#include "Platform.h"
 #include "Log.h"
+#include "Platform.h"
 
 #include "Renderer.h"
 
@@ -15,9 +14,9 @@ class Engine {
         ~Engine() = default;
 
         // Construction
-        static Engine* Create();
-        Engine* Init();
+        static Engine *Create();
+        Engine *Init();
 
-        void Connect(GLFWwindow* window);
+        void Connect(GLFWwindow *window);
         void Release();
 };

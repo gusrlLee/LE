@@ -1,9 +1,16 @@
-#include "Editor/MainLoop.h"
+#include <iostream>
+#include "RF/RF.h"
 
 int main()
 {
-    MainLoop::SetUp();
-    MainLoop::Run();
-    MainLoop::Shutdown();
+
+    RFLog::Init();
+    RF_TRACE("Start Engine");
+    
+    glfwInit();
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    UPtr<RFWindow> window = RFWindow::Create();
+    RF_TRACE("Create window");
+
     return 0;
 }

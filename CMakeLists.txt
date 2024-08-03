@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 set(CMAKE_CXX_STANDARD 20)
-project(Command-Interactive-Renderer)
+project(RF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
 option(USE_VULKAN "Graphics API: Vulkan" OFF)
 option(USE_METAL "Graphics API: Metal" OFF)
@@ -33,22 +34,9 @@ add_subdirectory(ThirdParty)
 find_package(spdlog)
 
 add_executable(${PROJECT_NAME} 
-    Editor/MainLoop.cpp
-    Editor/Editor.cpp
-    Editor/Window.cpp
-    
-    Engine/Log.cpp
-    Engine/Engine.cpp
-    Engine/Platform.cpp
-    Engine/Renderer.cpp
-    Engine/RenderCommand.cpp
-    Engine/RHI.cpp
-
-    Engine/RHI/Metal/MTRHI.cpp
-    Engine/RHI/Metal/MTSwapChain.cpp
-    Engine/RHI/Metal/MTAdapter.mm
-
     main.cpp
+    RF/RFWindow.cpp
+    RF/RFLog.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
