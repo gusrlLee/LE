@@ -1,16 +1,11 @@
-#include <iostream>
 #include "RF/RF.h"
 
 int main()
 {
+    RFEntryPoint::Init();
 
-    RFLog::Init();
-    RF_TRACE("Start Engine");
-    
-    glfwInit();
-    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-    UPtr<RFWindow> window = RFWindow::Create();
-    RF_TRACE("Create window");
+    RFEntryPoint::Run();
 
+    RFEntryPoint::Shutdown();
     return 0;
 }

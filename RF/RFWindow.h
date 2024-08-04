@@ -1,7 +1,7 @@
 #pragma once 
 
 #include "pch.h"
-#include "RF.h"
+#include "RFLog.h"
 
 class RFWindow {
     public:
@@ -12,10 +12,11 @@ class RFWindow {
 
         void Update();
         GLFWwindow* GetNativeWindowPtr() { return m_window; }
+        static GLFWwindow* GetInstance() { return m_window; } 
         bool IsShouldCloseWindow() { return glfwWindowShouldClose(m_window); } 
 
     private:
-        GLFWwindow* m_window;
+        static GLFWwindow* m_window;
 
         std::string m_window_title;
         int m_window_width;

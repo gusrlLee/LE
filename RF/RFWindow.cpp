@@ -1,5 +1,6 @@
 #include "RFWindow.h"
 
+GLFWwindow* RFWindow::m_window;
 
 UPtr<RFWindow> RFWindow::Create()
 {

@@ -35,8 +35,14 @@ find_package(spdlog)
 
 add_executable(${PROJECT_NAME} 
     main.cpp
+    RF/RFEntryPoint.cpp
+    RF/RFApplication.cpp
+    RF/RFEngine.cpp
     RF/RFWindow.cpp
     RF/RFLog.cpp
+    RF/RFDevice.cpp
+    RF/RFSwapChain.cpp
+    RF/RFAdapter.mm
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
