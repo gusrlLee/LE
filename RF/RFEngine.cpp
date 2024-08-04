@@ -10,9 +10,11 @@ void RFEngine::Init()
     m_device = RFDevice::Create();
     m_swapchain = RFSwapChain::Create();
     m_swapchain->Init();
+
+    m_render_target_object = RFRenderTargetObject::Create("Triangle");
 }
 
-void RFEngine::Run()
+void RFEngine::Draw()
 {
 
 }

@@ -17,6 +17,7 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <simd/simd.h>
 
 template<typename T>
 using UPtr = std::unique_ptr<T>;

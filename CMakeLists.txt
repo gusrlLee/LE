@@ -28,6 +28,7 @@ elseif(WIN32)
     endif()
 endif()
 
+
 add_subdirectory(ThirdParty)
 # add_subdirectory(LE)
 
@@ -43,6 +44,7 @@ add_executable(${PROJECT_NAME}
     RF/RFDevice.cpp
     RF/RFSwapChain.cpp
     RF/RFAdapter.mm
+    RF/RFRenderTargetObject.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
@@ -51,3 +53,5 @@ target_link_libraries(${PROJECT_NAME} glfw)
 target_link_libraries(${PROJECT_NAME} spdlog::spdlog)
 target_link_libraries(${PROJECT_NAME} METAL_CPP)
 target_link_libraries(${PROJECT_NAME} objc)
+
+target_compile_definitions(${PROJECT_NAME} PUBLIC RF_WORKING_ROOT_DIR="${CMAKE_SOURCE_DIR}")

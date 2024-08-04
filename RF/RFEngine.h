@@ -4,6 +4,7 @@
 
 #include "RFDevice.h"
 #include "RFSwapChain.h"
+#include "RFRenderTargetObject.h"
 
 class RFEngine {
     public:
@@ -12,10 +13,11 @@ class RFEngine {
         ~RFEngine() = default;
 
         void Init();
-        void Run();
+        void Draw();
         void Shutdown();
 
     private:
         SPtr<RFDevice> m_device;
         SPtr<RFSwapChain> m_swapchain;
+        SPtr<RFRenderTargetObject> m_render_target_object;
 };
