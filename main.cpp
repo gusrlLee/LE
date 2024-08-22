@@ -1,11 +1,6 @@
-#include "RF/RF.h"
-
+#include <iostream>
 int main()
 {
-    RFEntryPoint::Init();
-
-    RFEntryPoint::Run();
-
-    RFEntryPoint::Shutdown();
+    std::cout << "Hello world!" << std::endl;
     return 0;
 }

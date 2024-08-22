@@ -1,0 +1,18 @@
+[submodule "vender/glfw"]
+	path = vender/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "vender/glm"]
+	path = vender/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "vender/VulkanMemoryAllocator"]
+	path = vender/VulkanMemoryAllocator
+	url = https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git
+[submodule "vender/vk-bootstrap"]
+	path = vender/vk-bootstrap
+	url = https://github.com/charles-lunarg/vk-bootstrap.git
+[submodule "vender/volk"]
+	path = vender/volk
+	url = https://github.com/zeux/volk.git
+[submodule "vender/imgui"]
+	path = vender/imgui
+	url = https://github.com/ocornut/imgui.git
