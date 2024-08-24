@@ -16,3 +16,30 @@
 [submodule "vender/imgui"]
 	path = vender/imgui
 	url = https://github.com/ocornut/imgui.git
+[submodule "LE/vender/vk-bootstrap"]
+	path = LE/vender/vk-bootstrap
+	url = https://github.com/charles-lunarg/vk-bootstrap.git
+[submodule "LE/vender/volk"]
+	path = LE/vender/volk
+	url = https://github.com/zeux/volk.git
+[submodule "LE/vender/fastgltf"]
+	path = LE/vender/fastgltf
+	url = https://github.com/spnda/fastgltf
+[submodule "LE/vender/VulkanMemoryAllocator"]
+	path = LE/vender/VulkanMemoryAllocator
+	url = https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git
+[submodule "LE/vender/glm"]
+	path = LE/vender/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "LE/vender/imgui"]
+	path = LE/vender/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "LE/vender/tracy"]
+	path = LE/vender/tracy
+	url = https://github.com/wolfpld/tracy.git
+[submodule "LE/vender/fmt"]
+	path = LE/vender/fmt
+	url = https://github.com/fmtlib/fmt.git
+[submodule "LE/vender/glfw"]
+	path = LE/vender/glfw
+	url = https://github.com/glfw/glfw.git
