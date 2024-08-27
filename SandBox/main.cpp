@@ -1,6 +1,5 @@
 #include <iostream>
-
-#include "LE/Core/Application.h"
+#include "Core/Application.h"
 
 
 class Game : public Application {

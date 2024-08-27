@@ -1,7 +1,7 @@
 #pragma once 
 
-#define GLFW_INCLUDE_VULKAN
 #include "GLFW/glfw3.h"
+#include "Core/Config.h"
 
 #include <iostream>
 
@@ -14,11 +14,6 @@ public:
     virtual void GameLogic() = 0; // User setting 
 
 private:
-    // Window 
+    // Window (Detail in Config.h)
     GLFWwindow* m_window;
-
-    // Window Properties 
-    std::string m_window_title; 
-    int m_window_height;
-    int m_window_width;
 };

@@ -6,5 +6,5 @@ add_executable( SandBox
     main.cpp
 )
 
-target_include_directories(SandBox PUBLIC ${CMAKE_SOURCE_DIR})
+target_include_directories(SandBox PUBLIC ${CMAKE_SOURCE_DIR}/LE)
 target_link_libraries(SandBox LE)
