@@ -3,6 +3,9 @@
 #include "Core/Types.h"
 
 struct GLFWwindow;
+
+namespace LE {
+
 class GraphicsDevice;
 
 class Renderer {
@@ -13,3 +16,4 @@ public:
 private:
     SPtr<GraphicsDevice> m_device;
 };
+}

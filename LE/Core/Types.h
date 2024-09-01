@@ -5,12 +5,16 @@
 #include <memory>
 #include <vulkan/vulkan.h>
 
+namespace LE {
+
 template<typename T>
 using SPtr = std::shared_ptr<T>;
 template<typename T, typename ... Args>
-constexpr SPtr<T> CreateSPtr(Args&& ... args) 
+constexpr SPtr<T> CreateSPtr(Args&& ... args)
 {
     return std::make_shared<T>(std::forward<Args>(args)...);
+}
+
 }
 
 #define VK_CHECK(x)                                                     \
@@ -20,3 +24,4 @@ constexpr SPtr<T> CreateSPtr(Args&& ... args)
             throw std::runtime_error("[VULKAN] Detected Vulkan error : " + std::to_string(err));\
         }                                                               \
     } while (0)
+
